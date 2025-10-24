@@ -7,31 +7,60 @@
   </head>
   <body>
 
+    <!-- HEADER: TITLE + IMAGE -->
+    <div class="recipe-header">
+      <div class="recipe-header-text">
+        <h1 class="recipe-title">Giant Cinnamon Roll</h1>
+        <p class="recipe-subinfo">
+          Yield: 1 giant 9-inch roll • Soft, gooey, shareable
+        </p>
+        <p class="recipe-subinfo">
+          This is the test recipe. We’ll load real data later from JSON.
+        </p>
+      </div>
+
+      <div class="recipe-image-wrapper">
+        <!-- Later this <img> will be set from data (like recipes/cinnamon-roll.jpg) -->
+        <img src="https://via.placeholder.com/400x400?text=Cinnamon+Roll"
+             alt="Recipe photo placeholder" />
+      </div>
+    </div>
+
+    <!-- MAIN 3 COLUMNS -->
     <div class="container">
+
       <!-- INGREDIENTS COLUMN -->
       <div class="section ingredients">
         <h2>Ingredients</h2>
 
-        <!-- later this will be auto-filled from data -->
+        <!-- later this will be auto-filled from data groups ("Dry", "Wet", etc) -->
         <div>
+          <strong>DOUGH (DRY)</strong><br />
           <label>
             <input type="checkbox" />
             All-purpose flour
-          </label>
-          <br />
+          </label><br />
           <label>
             <input type="checkbox" />
             Sugar
-          </label>
-          <br />
+          </label><br />
           <label>
             <input type="checkbox" />
-            Butter (melted)
-          </label>
-          <br />
+            Instant yeast
+          </label><br /><br />
+
+          <strong>DOUGH (WET)</strong><br />
           <label>
             <input type="checkbox" />
-            Milk (warm)
+            Warm milk
+          </label><br />
+          <label>
+            <input type="checkbox" />
+            Melted butter
+          </label><br />
+          <label>
+            <input type="checkbox" />
+            Egg
           </label>
         </div>
       </div>
@@ -50,11 +79,11 @@
 
         <!-- list of ingredient amounts -->
         <div id="quantity-list">
-          <!-- JS will update these numbers later -->
           <div>All-purpose flour: <span data-base="300">300</span> g</div>
           <div>Sugar: <span data-base="50">50</span> g</div>
-          <div>Butter (melted): <span data-base="60">60</span> g</div>
-          <div>Milk (warm): <span data-base="180">180</span> ml</div>
+          <div>Melted butter: <span data-base="60">60</span> g</div>
+          <div>Warm milk: <span data-base="180">180</span> ml</div>
+          <div>Egg: <span data-base="1">1</span> pc</div>
         </div>
       </div>
 
@@ -62,24 +91,38 @@
       <div class="section method">
         <h2>Method</h2>
         <ol>
-          <li>Warm the <b>milk</b> (not hot). Mix in <b>sugar</b> and yeast, rest 5 min.</li>
-          <li>Whisk in <b>melted butter</b> and egg.</li>
-          <li>Add <b>flour</b> and salt. Knead 8–10 min until smooth.</li>
-          <li>Let rise ~1 hour, roll out, fill, shape, rise again, bake.</li>
+          <li>
+            Warm the <b>milk</b> (not hot). Mix in <b>sugar</b> and yeast, rest 5 min.
+          </li>
+          <li>
+            Whisk in <b>melted butter</b> and egg.
+          </li>
+          <li>
+            Add <b>flour</b> and salt. Knead 8–10 min until smooth.
+          </li>
+          <li>
+            Let rise ~1 hour. Roll dough, spread butter + cinnamon sugar,
+            roll up into a spiral.
+          </li>
+          <li>
+            Let it rise again in the pan, then bake.
+          </li>
         </ol>
       </div>
     </div>
 
+    <!-- NOTES / TIPS -->
+    <div class="notes-block">
+      <p class="notes-block-title">Notes / Tips:</p>
+      <ul class="notes-block-list">
+        <li>Dough will feel a bit sticky. Don’t panic and don’t dump extra flour.</li>
+        <li>Milk should be warm, not hot, or the yeast dies.</li>
+        <li>Tighter roll = taller cinnamon roll, looser roll = flatter, more pull-apart.</li>
+      </ul>
+    </div>
+
     <!-- BOTTOM OVEN BAR -->
-    <div style="
-      width:100%;
-      padding:16px;
-      text-align:center;
-      font-size:18px;
-      font-weight:bold;
-      border-top:2px solid #00000030;
-      background:#fffbe6;
-    ">
+    <div class="oven-bar">
       Bake at 180°C for 22–25 minutes (fan oven, middle rack)
     </div>
 
