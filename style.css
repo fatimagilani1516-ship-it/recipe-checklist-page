@@ -1,0 +1,33 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: #fdfdfd;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.section {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #00000030;
+}
+
+.ingredients {
+  background-color: #c7f7c4;
+}
+
+.quantity {
+  background-color: #165c74;
+  color: white;
+}
+
+.method {
+  background-color: #e8a4e8;
+}
+
+h2 {
+  text-align: center;
+}
