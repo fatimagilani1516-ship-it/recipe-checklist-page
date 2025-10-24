@@ -2,17 +2,68 @@ body {
   font-family: sans-serif;
   margin: 0;
   background: #fdfdfd;
+  color: #222;
 }
 
+/* --- HEADER WITH IMAGE --- */
+.recipe-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 2px solid #00000020;
+  background: #fff;
+}
+
+.recipe-header-text {
+  flex: 1;
+}
+
+.recipe-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+}
+
+.recipe-subinfo {
+  font-size: 14px;
+  color: #444;
+  margin: 0;
+}
+
+.recipe-image-wrapper {
+  width: 220px;
+  height: 220px;
+  border: 1px solid #00000030;
+  background: #f3f3f3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.recipe-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  font-size: 12px;
+  color: #666;
+}
+
+/* --- MAIN 3-COLUMN LAYOUT --- */
 .container {
   display: flex;
-  height: 100vh;
+  min-height: 60vh;
 }
 
 .section {
   flex: 1;
   padding: 20px;
   border: 1px solid #00000030;
+  box-sizing: border-box;
 }
 
 .ingredients {
@@ -24,10 +75,58 @@ body {
   color: white;
 }
 
+.quantity button {
+  cursor: pointer;
+  margin: 0 4px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ffffff55;
+  background: #ffffff22;
+  color: #fff;
+  font-size: 14px;
+}
+
+.quantity button:hover {
+  background: #ffffff44;
+}
+
 .method {
   background-color: #e8a4e8;
 }
 
 h2 {
   text-align: center;
+  margin-top: 0;
+}
+
+/* --- NOTES / TIPS BLOCK --- */
+.notes-block {
+  background: #fff9d6;
+  border-top: 2px solid #00000030;
+  border-bottom: 2px solid #00000030;
+  padding: 20px;
+}
+
+.notes-block-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+}
+
+.notes-block-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* --- OVEN BAR --- */
+.oven-bar {
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-top: 2px solid #00000030;
+  background: #fffbe6;
 }
