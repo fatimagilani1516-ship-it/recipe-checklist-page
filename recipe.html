@@ -1,5 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <head><title>Recipe Page</title></head>
-  <body><h1>Recipe layout will go here soon</h1></body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Recipe View</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <div class="container">
+      <!-- INGREDIENTS COLUMN -->
+      <div class="section ingredients">
+        <h2>Ingredients</h2>
+
+        <!-- later this will be auto-filled from data -->
+        <div>
+          <label>
+            <input type="checkbox" />
+            All-purpose flour
+          </label>
+          <br />
+          <label>
+            <input type="checkbox" />
+            Sugar
+          </label>
+          <br />
+          <label>
+            <input type="checkbox" />
+            Butter (melted)
+          </label>
+          <br />
+          <label>
+            <input type="checkbox" />
+            Milk (warm)
+          </label>
+        </div>
+      </div>
+
+      <!-- QUANTITY COLUMN -->
+      <div class="section quantity">
+        <h2>Quantity</h2>
+
+        <!-- scaling controls -->
+        <div style="text-align:center; margin-bottom: 20px;">
+          <span>Scale: </span>
+          <button onclick="setScale(0.5)">0.5x</button>
+          <button onclick="setScale(1)">1x</button>
+          <button onclick="setScale(2)">2x</button>
+        </div>
+
+        <!-- list of ingredient amounts -->
+        <div id="quantity-list">
+          <!-- JS will update these numbers later -->
+          <div>All-purpose flour: <span data-base="300">300</span> g</div>
+          <div>Sugar: <span data-base="50">50</span> g</div>
+          <div>Butter (melted): <span data-base="60">60</span> g</div>
+          <div>Milk (warm): <span data-base="180">180</span> ml</div>
+        </div>
+      </div>
+
+      <!-- METHOD COLUMN -->
+      <div class="section method">
+        <h2>Method</h2>
+        <ol>
+          <li>Warm the <b>milk</b> (not hot). Mix in <b>sugar</b> and yeast, rest 5 min.</li>
+          <li>Whisk in <b>melted butter</b> and egg.</li>
+          <li>Add <b>flour</b> and salt. Knead 8–10 min until smooth.</li>
+          <li>Let rise ~1 hour, roll out, fill, shape, rise again, bake.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- BOTTOM OVEN BAR -->
+    <div style="
+      width:100%;
+      padding:16px;
+      text-align:center;
+      font-size:18px;
+      font-weight:bold;
+      border-top:2px solid #00000030;
+      background:#fffbe6;
+    ">
+      Bake at 180°C for 22–25 minutes (fan oven, middle rack)
+    </div>
+
+    <script src="app.js"></script>
+  </body>
 </html>
